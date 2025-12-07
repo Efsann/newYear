@@ -14,17 +14,18 @@
             box-sizing: border-box;
         }
 
-        body {
-            min-height: 100vh;
-            font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: radial-gradient(circle at top, #ffeefc 0%, #ffe4f3 25%, #ffe4f3 40%, #ffd6f5 60%, #ffc9f0 75%, #ffbde9 100%);
-            overflow: hidden;
-            color: #4b255e;
-            padding: 16px;
-        }
+body {
+    min-height: 100vh;
+    font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at top, #ffeefc 0%, #ffe4f3 25%, #ffe4f3 40%, #ffd6f5 60%, #ffc9f0 75%, #ffbde9 100%);
+    overflow-x: hidden;   /* YALNIZ üfüqi gizlə, şaquli qalır */
+    color: #4b255e;
+    padding: 16px;
+}
+
 
         .overlay {
             position: fixed;
@@ -540,6 +541,12 @@
             font-size: 11px;
             color: #a068c8;
         }
+        @media (max-width: 860px) {
+    body {
+        align-items: flex-start;   /* mərkəzdən yox, yuxarıdan başlasın */
+    }
+}
+
     </style>
 </head>
 <body>
@@ -843,3 +850,4 @@ if (decorations) {
 </script>
 </body>
 </html>
+
